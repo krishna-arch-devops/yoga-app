@@ -1,1 +1,3 @@
-SpaceCares Setup 0.1.0
+SpaceCaresSetup0.1.0.exe
+SpaceCares.exe
+electron.exe
