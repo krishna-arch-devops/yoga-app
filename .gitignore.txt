@@ -1,3 +1,4 @@
-SpaceCaresSetup0.1.0.exe
-SpaceCares.exe
-electron.exe
+node_modules/electron/dist/electron.exe
+release/SpaceCares.exe
+release/SpaceCares.exe
+*.exe
