@@ -124,19 +124,38 @@ function hasActiveReminderWindow() {
   return reminderWindow !== null && !reminderWindow.isDestroyed();
 }
 
+// function scheduleReminder(delayMinutes = state.settings.intervalMinutes) {
+//   clearReminderTimer();
+//   if (state.settings.isPaused) {
+//     return;
+//   }
+
+//   const safeDelayMinutes = Math.max(1, delayMinutes);
+//   reminderTimer = setTimeout(() => {
+//     reminderTimer = null;
+//     showReminderWindow();
+//   }, safeDelayMinutes * 60 * 1000);
+// }
+
+///
+///
 function scheduleReminder(delayMinutes = state.settings.intervalMinutes) {
-  clearReminderTimer();
+  // clearReminderTimer();
+
   if (state.settings.isPaused) {
     return;
   }
 
   const safeDelayMinutes = Math.max(1, delayMinutes);
+
   reminderTimer = setTimeout(() => {
     reminderTimer = null;
     showReminderWindow();
   }, safeDelayMinutes * 60 * 1000);
 }
 
+///
+///
 function createSettingsWindow() {
   if (settingsWindow) {
     settingsWindow.show();
