@@ -125,12 +125,14 @@ function hasActiveReminderWindow() {
 }
 
 function scheduleReminder(delayMinutes = state.settings.intervalMinutes) {
-  clearReminderTimer();
+  // clearReminderTimer();
+
   if (state.settings.isPaused) {
     return;
   }
 
   const safeDelayMinutes = Math.max(1, delayMinutes);
+
   reminderTimer = setTimeout(() => {
     reminderTimer = null;
     showReminderWindow();
